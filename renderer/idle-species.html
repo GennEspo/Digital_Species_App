@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idle Species — Digital Friend</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* ← blocca lo scroll */
+  position: fixed;  /* ← impedisce movimento */
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* ← opzionale: lascia passare i click */
+  background: transparent; /* ← anche il canvas trasparente */
+  canvas {
+  z-index: 9999;
+}
+
+}
+
+  </style>
+</head>
+<body>
+  <canvas id="c"></canvas>
+  <script src="idle-species.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+:root {
+  --bg: transparent; /* Corretto da #transparent a transparent */
+  --grid-bg: #16181d;
+  --cell: rgb(255, 255, 255, 0.4);
+  --cell-filled: white;
+  --cell-hover: gray;
+  --gap: 2px;
+  --cell-size: 4px;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  font-weight: 400;
+  color: white;
+  
+  /* --- MODIFICA FONDAMENTALE --- */
+  -webkit-app-region: no-drag; /* Prima era 'drag', ora è bloccato */
+  /* ----------------------------- */
+  
+  padding: 4px 3px;
+  overflow: hidden; /* Evita scrollbar */
+}
+
+/* Assicuriamo che il canvas non blocchi gli eventi */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none; /* I click passano attraverso il canvas */
+}
+
+.wrap { margin-bottom: 5px; }
+.clock { display: flex; flex-direction: column; gap: 3px; }
+.row {
+  display: grid;
+  grid-template-columns: repeat(60, var(--cell-size));
+  grid-auto-rows: var(--cell-size);
+  gap: var(--gap);
+}
+.cell {
+  opacity: 0;
+  width: var(--cell-size);
+  height: var(--cell-size);
+  background: var(--cell);
+  transition: all 0.5s ease-in-out;
+}
+.cell.filled { background: var(--cell-filled); }
+.cell:hover { background: var(--cell-hover); }
+.cell[aria-current="true"] { background-color: red; }
+.stat, .time { display: none; }

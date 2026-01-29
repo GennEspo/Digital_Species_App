@@ -1,0 +1,19 @@
+# Dipendenze (pesantissime)
+node_modules/
+
+# Cartelle di output/build (l'eseguibile creato)
+out/
+dist/
+build/
+
+# File di sistema inutili
+.DS_Store
+Thumbs.db
+
+# Log di errore
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Variabili d'ambiente (sicurezza)
+.env
