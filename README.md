@@ -20,7 +20,7 @@ Digital Species is an Electron-based application that renders a frameless, trans
 ## INSTALLATION
 
 1. Clone the repository
-git clone https://github.com/TUO-USERNAME/digital-species.git
+git clone 
 
 2. Enter the directory
 cd digital-species
